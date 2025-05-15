@@ -250,7 +250,7 @@ public final class EndpointRequest {
 		}
 
 		private List<ServerWebExchangeMatcher> getDelegateMatchers(Set<String> paths) {
-			return paths.stream().map(path -> {
+			return paths.stream().map((path) -> {
 				Assert.notNull(path, "'path' must not be null");
 				return new PathPatternParserServerWebExchangeMatcher(path + "/**");
 			}).collect(Collectors.toList());
