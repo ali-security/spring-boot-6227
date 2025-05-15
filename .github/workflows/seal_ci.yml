@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: "Build"
         run: |
-          ./gradlew build -Dorg.gradle.internal.launcher.welcomeMessageEnabled=false --no-daemon -x asciidoctorPdf -x asciidoctor -x asciidoctorMultipage
+          ./gradlew build -Dorg.gradle.internal.launcher.welcomeMessageEnabled=false --no-daemon 
       - name: "Upload jars"
         if: always()
         uses: actions/upload-artifact@v4
